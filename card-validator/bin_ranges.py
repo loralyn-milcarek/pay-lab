@@ -18,3 +18,27 @@ CARD_TYPES = {
     'lengths': [13, 16, 19]
   }
 }
+
+def create_lookup_table(card_types):
+  """
+  Create a prefix-based lookup table from card type definitions.
+  
+  Args:
+    card_types: Dict mapping card names to their BIN ranges and valid lengths
+    
+  Returns:
+    Dict mapping string prefixes to card metadata (name and lengths set)
+  """
+  lookup_table = {}
+
+  for name, details in card_types.items():
+    lengths = set(details['lengths'])
+    for prefix in details['ranges']:
+      lookup_table[str(prefix)] = {
+        'name': name,
+        'lengths': lengths
+      }
+
+  return lookup_table
+
+CARD_LOOKUP_BY_PREFIX = create_lookup_table(CARD_TYPES)
