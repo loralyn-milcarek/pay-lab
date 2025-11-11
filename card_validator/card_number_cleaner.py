@@ -4,4 +4,4 @@ def clean(card_number):
   """
     Removes all non-digit characters from the card number string.
   """
-  return re.sub(r'\D', '', card_number)
+  return re.sub(r'\D', '', str(card_number))
