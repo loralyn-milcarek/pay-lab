@@ -4,10 +4,8 @@ An exploration of payment systems, card processing, and financial technology con
 
 ## Explorations
 
-### 💳 Card Validation Suite
+### 💳 [card_validator](https://github.com/loralyn-milcarek/pay-lab/tree/main/card_validator)
 A practical implementation of credit card validation covering Luhn checksum verification, card type identification via BIN prefix matching, and length validation per network. 
-
-*Key files:* `luhn_validator.py`, `bin_ranges.py`, `card_type_validator.py`
 
 ---
 
