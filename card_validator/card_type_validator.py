@@ -1,6 +1,6 @@
-from bin_ranges import CARD_LOOKUP_BY_PREFIX
-from luhn_validator import validate_card_number
-from card_number_cleaner import clean
+from .bin_ranges import CARD_LOOKUP_BY_PREFIX
+from .luhn_validator import validate_card_number
+from .card_number_cleaner import clean
 
 def identify_card(card_number):
   """

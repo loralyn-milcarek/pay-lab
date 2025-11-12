@@ -1,4 +1,4 @@
-from card_number_cleaner import clean
+from .card_number_cleaner import clean
 
 def validate_card_number(card_number):
   digits = clean(card_number)
@@ -15,5 +15,5 @@ def validate_card_number(card_number):
   
   return (running_sum + check_digit) % 10 == 0
 
-print(validate_card_number('17893729974')) # true
-print(validate_card_number('17893711114')) # false
+
+print(validate_card_number('4242424242424242'))
