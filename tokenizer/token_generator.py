@@ -29,7 +29,7 @@ class TokenVault:
     Retrieve original card number from token.
     Returns: Original PAN or None if token is invalid
     """
-    return self._vault[token] if self.is_valid_token(token) else None
+    return self._vault.get(token)
 
   def is_valid_token(self, token: str) -> bool:
     """
