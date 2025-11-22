@@ -1,12 +1,6 @@
-from gpiozero import Device
-from gpiozero.pins.mock import MockFactory
 from gpiozero import LED
 import time
 from enum import Enum
-
-# Mock pins for testing
-# To run with hardware, remove this line and connect LED to GPIO17 + Ground
-Device.pin_factory = MockFactory()
 
 class PaymentStatus(Enum):
   PENDING = 'pending'
